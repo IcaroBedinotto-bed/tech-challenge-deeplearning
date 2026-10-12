@@ -4,10 +4,11 @@ from langchain_chroma import Chroma
 
 
 def load_llm() -> ChatOllama:
-
     return ChatOllama(
         model="qwen3:4b",
         temperature=0,
+        num_predict=128,
+        num_ctx=2048,
     )
 
 
