@@ -13,7 +13,7 @@ from src.rag.chain import load_llm, ask_rag
 # --------------------------------------------------
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-CHROMA_DIR = PROJECT_ROOT / "data" / "processed" / "chroma_final"
+CHROMA_DIR = Path("C:/chroma_data/orders_reviews")
 
 st.set_page_config(
     page_title="Voice of Customer Intelligence",
@@ -42,7 +42,7 @@ def load_resources():
     embeddings = load_embedding_model()
 
     vector_store = Chroma(
-        collection_name="olist_reviews",
+        collection_name="orders_reviews",
         persist_directory=str(CHROMA_DIR),
         embedding_function=embeddings,
     )

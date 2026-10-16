@@ -17,7 +17,7 @@ def create_vector_store(
 
     if persist_directory is None:
         project_root = Path(__file__).resolve().parents[2]
-        persist_directory = project_root / "data" / "processed" / "chroma"
+        persist_directory = Path("C:/chroma_data/order_reviews")
 
     persist_directory = Path(persist_directory)
     persist_directory.mkdir(parents=True, exist_ok=True)
@@ -25,7 +25,7 @@ def create_vector_store(
     vector_store = Chroma.from_documents(
         documents=documents,
         embedding=embeddings,
-        collection_name="olist_reviews",
+        collection_name="orders_reviews",
         persist_directory=str(persist_directory),
     )
 

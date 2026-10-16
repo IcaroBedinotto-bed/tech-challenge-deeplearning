@@ -18,12 +18,7 @@ RAW_DATA_PATH = (
     / "olist_order_reviews_dataset.csv"
 )
 
-CHROMA_DIR = (
-    PROJECT_ROOT
-    / "data"
-    / "processed"
-    / "chroma"
-)
+CHROMA_DIR = Path("C:/chroma_data/orders_reviews")
 
 COLLECTION_NAME = "orders_reviews"
 
